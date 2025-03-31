@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Picture-in-Picture",
+  "description": "Picture-in-Picture with Smart Controls & Platform Detection",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab", "tabs", "storage"],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.netflix.com/*",
+    "*://*.amazon.com/*",
+    "*://*.primevideo.com/*",
+    "*://*.hulu.com/*",
+    "*://*.disneyplus.com/*",
+    "*://*.hbomax.com/*",
+    "*://*.peacocktv.com/*",
+    "*://*.crunchyroll.com/*",
+    "*://*.twitch.tv/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.netflix.com/*",
+        "*://*.amazon.com/*",
+        "*://*.primevideo.com/*",
+        "*://*.hulu.com/*",
+        "*://*.disneyplus.com/*",
+        "*://*.hbomax.com/*",
+        "*://*.peacocktv.com/*",
+        "*://*.crunchyroll.com/*",
+        "*://*.twitch.tv/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart PiP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>Smart PiP Controls</h3>
+    <button id="pip">Toggle PiP (Alt+P / ⌘+P)</button>
+    <button id="back">⏪ Back 10s</button>
+    <button id="skip">⏩ Skip 10s</button>
+
+    <div class="toggle-container">
+      <span>Hide PiP Controls</span>
+      <label class="switch">
+        <input type="checkbox" id="displayToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="shortcuts">
+      <p>Right-click on video for PiP menu</p>
+      <p>Keyboard shortcuts:</p>
+      <ul>
+        <li>Alt+P / ⌘+P: Toggle PiP</li>
+      </ul>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
